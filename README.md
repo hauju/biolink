@@ -21,5 +21,5 @@ bun install -D prettier-plugin-tailwindcss
 Watch folder
 
 ```bash
-bunx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+bunx tailwindcss -i ./src/input.css -o ./public/tailwind.css --watch
 ```
