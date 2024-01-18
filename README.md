@@ -23,3 +23,7 @@ Watch folder
 ```bash
 bunx tailwindcss -i ./src/input.css -o ./public/tailwind.css --watch
 ```
+
+## Status
+
+[![ci](https://github.com/hauju/biolink/actions/workflows/build.yml/badge.svg)](https://github.com/hauju/biolink/actions/workflows/build.yml)
