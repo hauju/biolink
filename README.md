@@ -10,7 +10,7 @@ Install tailwindcss
 https://tailwindcss.com/docs/installation
 
 ```bash
-bun install -D tailwindcss
+bun install -D tailwindcss @tailwindcss/cli
 bunx tailwindcss init
 ```
 
@@ -21,7 +21,7 @@ bun install -D prettier-plugin-tailwindcss
 Watch folder
 
 ```bash
-bunx tailwindcss -i ./src/input.css -o ./public/tailwind.css --watch
+bunx @tailwindcss/cli -i ./src/input.css -o ./public/tailwind.css --watch
 ```
 
 ## Status
