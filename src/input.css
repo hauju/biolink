@@ -1,4 +1,7 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+@source "./public/*.{html,js}";
+@plugin "daisyui";
+
 
 @theme {
     --color-twitter-blue: #1DA1F2;

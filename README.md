@@ -24,6 +24,17 @@ Watch folder
 bunx @tailwindcss/cli -i ./src/input.css -o ./public/tailwind.css --watch
 ```
 
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
 ## Status
 
 [![ci](https://github.com/hauju/biolink/actions/workflows/build.yml/badge.svg)](https://github.com/hauju/biolink/actions/workflows/build.yml)
