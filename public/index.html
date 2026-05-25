@@ -9,10 +9,12 @@
         />
         <meta name="author" content="Hauke Jung" />
         <meta name="theme-color" content="#0f172a" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="canonical" href="https://haukejung.de/" />
 
         <!-- Open Graph / Social Media -->
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Hauke Jung" />
         <meta property="og:url" content="https://haukejung.de/" />
         <meta property="og:locale" content="en_US" />
         <meta
@@ -29,9 +31,14 @@
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="Hauke Jung - Indie Hacker & Software Engineer"
+        />
 
         <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@haukejung" />
         <meta name="twitter:site" content="@haukejung" />
         <meta
             name="twitter:title"
@@ -50,17 +57,66 @@
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Hauke Jung",
-                "url": "https://haukejung.de",
-                "image": "https://haukejung.de/assets/images/hauju.jpg",
-                "jobTitle": "Software Engineer",
-                "description": "Indie Hacker & Software Engineer",
-                "sameAs": [
-                    "https://github.com/hauju",
-                    "https://twitter.com/haukejung",
-                    "https://bsky.app/profile/hauju.bsky.social",
-                    "https://www.linkedin.com/in/haukejung/"
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://haukejung.de/#person",
+                        "name": "Hauke Jung",
+                        "url": "https://haukejung.de",
+                        "image": "https://haukejung.de/assets/images/hauju.jpg",
+                        "jobTitle": "Software Engineer",
+                        "description": "Indie Hacker & Software Engineer",
+                        "knowsAbout": [
+                            "Software Engineering",
+                            "Rust",
+                            "Indie Hacking",
+                            "Web Development"
+                        ],
+                        "sameAs": [
+                            "https://github.com/hauju",
+                            "https://twitter.com/haukejung",
+                            "https://bsky.app/profile/hauju.bsky.social",
+                            "https://www.linkedin.com/in/haukejung/"
+                        ],
+                        "owns": [
+                            { "@id": "https://infra.page/#website" },
+                            { "@id": "https://seggwat.com/#website" },
+                            { "@id": "https://oxidt.com/#website" },
+                            { "@id": "https://hikeandcode.com/#website" }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://infra.page/#website",
+                        "url": "https://infra.page",
+                        "name": "Infra.page",
+                        "description": "One dashboard for your entire project.",
+                        "author": { "@id": "https://haukejung.de/#person" }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://seggwat.com/#website",
+                        "url": "https://seggwat.com",
+                        "name": "SeggWat",
+                        "description": "Feedback collection platform.",
+                        "author": { "@id": "https://haukejung.de/#person" }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://oxidt.com/#website",
+                        "url": "https://oxidt.com",
+                        "name": "Oxidt",
+                        "description": "Tech blog on Rust, software, and indie hacking.",
+                        "author": { "@id": "https://haukejung.de/#person" }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://hikeandcode.com/#website",
+                        "url": "https://hikeandcode.com",
+                        "name": "Hike & Code",
+                        "description": "Hiking meets software engineering.",
+                        "author": { "@id": "https://haukejung.de/#person" }
+                    }
                 ]
             }
         </script>
@@ -68,7 +124,7 @@
         <title>Hauke Jung - Indie Hacker & Software Engineer</title>
 
         <link href="./tailwind.css" rel="stylesheet" type="text/css" />
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="preload" as="image" href="assets/images/hauju.jpg" fetchpriority="high" />
         <script
             defer
             src="./assets/js/analytics.js"
@@ -157,7 +213,11 @@
                     <div class="inline-block relative">
                         <img
                             src="assets/images/hauju.jpg"
-                            alt="Hauke Jung profile picture"
+                            alt="Hauke Jung - Indie Hacker and Software Engineer"
+                            width="144"
+                            height="144"
+                            fetchpriority="high"
+                            decoding="async"
                             class="h-36 w-36 rounded-full border-4 border-white/10 shadow-2xl object-cover"
                         />
                         <div
@@ -198,9 +258,9 @@
                             <a
                                 href="https://infra.page"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener"
                                 class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit Infra.page"
+                                aria-label="Visit Infra.page - dashboard for indie projects"
                             >
                                 <article
                                     class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
@@ -258,9 +318,9 @@
                             <a
                                 href="https://seggwat.com"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener"
                                 class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit SeggWat Feedback"
+                                aria-label="Visit SeggWat - user feedback collection platform"
                             >
                                 <article
                                     class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
@@ -317,9 +377,9 @@
                             <a
                                 href="https://oxidt.com"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener"
                                 class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit Oxidt Blog"
+                                aria-label="Read Oxidt - tech blog on software and indie hacking"
                             >
                                 <article
                                     class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
@@ -375,9 +435,9 @@
                             <a
                                 href="https://hikeandcode.com"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener"
                                 class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit Hike and Code"
+                                aria-label="Visit Hike & Code - hiking meets software engineering"
                             >
                                 <article
                                     class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
@@ -459,9 +519,9 @@
                         <a
                             href="https://github.com/hauju"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="me noopener"
                             class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Visit GitHub profile"
+                            aria-label="Visit Hauke Jung on GitHub"
                         >
                             <div class="flex items-center space-x-4">
                                 <div
@@ -505,32 +565,29 @@
                         <a
                             href="https://twitter.com/haukejung"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="me noopener"
                             class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Visit Twitter profile"
+                            aria-label="Follow Hauke Jung on Twitter / X"
                         >
                             <div class="flex items-center space-x-4">
                                 <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
+                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-slate-800 to-black rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
                                         viewBox="0 0 24 24"
-                                        stroke-width="2"
-                                        stroke="currentColor"
+                                        fill="currentColor"
                                         class="w-6 h-6 text-white"
+                                        aria-hidden="true"
                                     >
                                         <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
                                         />
                                     </svg>
                                 </div>
                                 <span
-                                    class="text-white font-semibold text-lg group-hover:text-blue-300 transition-colors"
-                                    >Twitter</span
+                                    class="text-white font-semibold text-lg group-hover:text-gray-300 transition-colors"
+                                    >Twitter / X</span
                                 >
                             </div>
                             <svg
@@ -551,9 +608,9 @@
                         <a
                             href="https://bsky.app/profile/hauju.bsky.social"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="me noopener"
                             class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Visit Bluesky profile"
+                            aria-label="Follow Hauke Jung on Bluesky"
                         >
                             <div class="flex items-center space-x-4">
                                 <div
@@ -594,9 +651,9 @@
                         <a
                             href="https://www.linkedin.com/in/haukejung/"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="me noopener"
                             class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Visit LinkedIn profile"
+                            aria-label="Connect with Hauke Jung on LinkedIn"
                         >
                             <div class="flex items-center space-x-4">
                                 <div
