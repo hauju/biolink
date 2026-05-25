@@ -124,7 +124,12 @@
         <title>Hauke Jung - Indie Hacker & Software Engineer</title>
 
         <link href="./tailwind.css" rel="stylesheet" type="text/css" />
-        <link rel="preload" as="image" href="assets/images/hauju.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="assets/images/hauju-288.webp" type="image/webp" fetchpriority="high" />
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
         <script
             defer
             src="./assets/js/analytics.js"
@@ -211,15 +216,18 @@
                 <!-- Profile Section -->
                 <header class="text-center fade-in">
                     <div class="inline-block relative">
-                        <img
-                            src="assets/images/hauju.jpg"
-                            alt="Hauke Jung - Indie Hacker and Software Engineer"
-                            width="144"
-                            height="144"
-                            fetchpriority="high"
-                            decoding="async"
-                            class="h-36 w-36 rounded-full border-4 border-white/10 shadow-2xl object-cover"
-                        />
+                        <picture>
+                            <source srcset="assets/images/hauju-288.webp" type="image/webp" />
+                            <img
+                                src="assets/images/hauju-288.jpg"
+                                alt="Hauke Jung - Indie Hacker and Software Engineer"
+                                width="144"
+                                height="144"
+                                fetchpriority="high"
+                                decoding="async"
+                                class="h-36 w-36 rounded-full border-4 border-white/10 shadow-2xl object-cover"
+                            />
+                        </picture>
                         <div
                             class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl -z-10"
                         ></div>
