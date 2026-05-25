@@ -805,22 +805,10 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
-  .badge-secondary {
-    @layer daisyui.l1.l2 {
-      --badge-color: var(--color-secondary);
-      --badge-fg: var(--color-secondary-content);
-    }
-  }
   .badge-success {
     @layer daisyui.l1.l2 {
       --badge-color: var(--color-success);
       --badge-fg: var(--color-success-content);
-    }
-  }
-  .badge-warning {
-    @layer daisyui.l1.l2 {
-      --badge-color: var(--color-warning);
-      --badge-fg: var(--color-warning-content);
     }
   }
   .group-hover\:translate-x-1 {
