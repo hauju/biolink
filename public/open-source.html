@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Open-source projects by Hauke Jung — Rust drivers, libraries, developer tools, and templates, all built in the open on GitHub."
+        />
+        <meta name="author" content="Hauke Jung" />
+        <meta name="theme-color" content="#0f172a" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+        <link rel="canonical" href="https://haukejung.de/open-source.html" />
+
+        <!-- Open Graph / Social Media -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Hauke Jung" />
+        <meta property="og:url" content="https://haukejung.de/open-source.html" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Open Source — Hauke Jung" />
+        <meta
+            property="og:description"
+            content="Rust drivers, libraries, developer tools, and templates I build in the open."
+        />
+        <meta
+            property="og:image"
+            content="https://haukejung.de/assets/images/og.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Hauke Jung — Open Source" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@haukejung" />
+        <meta name="twitter:site" content="@haukejung" />
+        <meta name="twitter:title" content="Open Source — Hauke Jung" />
+        <meta
+            name="twitter:description"
+            content="Rust drivers, libraries, developer tools, and templates I build in the open."
+        />
+        <meta
+            name="twitter:image"
+            content="https://haukejung.de/assets/images/og.png"
+        />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "@id": "https://haukejung.de/open-source.html",
+                "url": "https://haukejung.de/open-source.html",
+                "name": "Open Source — Hauke Jung",
+                "description": "Open-source projects by Hauke Jung — Rust drivers, libraries, developer tools, and templates.",
+                "author": { "@id": "https://haukejung.de/#person" },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "scd4x-rs",
+                            "codeRepository": "https://github.com/hauju/scd4x-rs",
+                            "programmingLanguage": "Rust",
+                            "description": "Embedded-hal driver for the Sensirion SCD4x CO₂ / humidity / temperature sensor family."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "dioxus-docs-kit",
+                            "codeRepository": "https://github.com/hauju/dioxus-docs-kit",
+                            "programmingLanguage": "Rust",
+                            "description": "Reusable, drop-in documentation site kit for Dioxus applications."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "fluent-assertions-rs",
+                            "codeRepository": "https://github.com/hauju/fluent-assertions-rs",
+                            "programmingLanguage": "Rust",
+                            "description": "Natural-language, fluent assertion syntax for more readable Rust tests."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "infrapage",
+                            "codeRepository": "https://github.com/hauju/infrapage",
+                            "programmingLanguage": "Rust",
+                            "description": "Self-hosted, widget-based infrastructure dashboard — the engine behind infra.page."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "dx-saas-template",
+                            "codeRepository": "https://github.com/hauju/dx-saas-template",
+                            "programmingLanguage": "Rust",
+                            "description": "Production-ready fullstack Dioxus 0.7 SaaS starter template."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "sen5x-rs",
+                            "codeRepository": "https://github.com/hauju/sen5x-rs",
+                            "programmingLanguage": "Rust",
+                            "description": "Embedded-hal driver for the Sensirion SEN5x environmental sensor node."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "stepshots",
+                            "codeRepository": "https://github.com/hauju/stepshots",
+                            "programmingLanguage": "Rust",
+                            "description": "CLI, Chrome extension, and embeds for recording interactive product demos."
+                        },
+                        {
+                            "@type": "SoftwareSourceCode",
+                            "name": "internal-traffic-filter",
+                            "codeRepository": "https://github.com/hauju/internal-traffic-filter",
+                            "programmingLanguage": "JavaScript",
+                            "description": "Chrome extension that filters your own visits out of Umami and datafa.st analytics."
+                        }
+                    ]
+                }
+            }
+        </script>
+
+        <title>Open Source — Hauke Jung</title>
+
+        <link href="./tailwind.css" rel="stylesheet" type="text/css" />
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+        <script
+            defer
+            src="./assets/js/analytics.js"
+            data-website-id="ee3ec123-3c7d-4354-8272-2d6f1e528e3c"
+            data-host-url="https://umami.oxidt.com"
+        ></script>
+
+        <style>
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.6s ease-out forwards;
+            }
+
+            .link-card {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .link-card:hover {
+                transform: translateY(-2px);
+            }
+
+            .link-card:active {
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+
+    <body class="antialiased">
+        <main
+            class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-800 py-12 px-4"
+        >
+            <div class="max-w-3xl mx-auto">
+                <!-- Top Nav -->
+                <nav
+                    aria-label="Primary"
+                    class="flex justify-center gap-2 text-sm mb-10 fade-in"
+                >
+                    <a
+                        href="/"
+                        class="px-4 py-2 rounded-full font-medium text-gray-400 hover:text-white hover:bg-white/5 border border-transparent transition-colors"
+                        >Home</a
+                    >
+                    <a
+                        href="/open-source.html"
+                        aria-current="page"
+                        class="px-4 py-2 rounded-full font-medium text-white bg-white/10 border border-white/10 transition-colors"
+                        >Open Source</a
+                    >
+                    <a
+                        href="/about.html"
+                        class="px-4 py-2 rounded-full font-medium text-gray-400 hover:text-white hover:bg-white/5 border border-transparent transition-colors"
+                        >About</a
+                    >
+                </nav>
+
+                <!-- Header -->
+                <header class="text-center fade-in">
+                    <h1
+                        class="text-3xl md:text-4xl font-bold text-white font-mono tracking-tight"
+                    >
+                        Open Source
+                    </h1>
+                    <p
+                        class="mt-3 text-base md:text-lg text-gray-300 max-w-lg mx-auto leading-relaxed"
+                    >
+                        Libraries, drivers, and tools I build in the open — mostly
+                        Rust, all on
+                        <a
+                            href="https://github.com/hauju"
+                            target="_blank"
+                            rel="me noopener"
+                            class="text-cyan-300 hover:text-cyan-200 underline underline-offset-2"
+                            >GitHub</a
+                        >.
+                    </p>
+                </header>
+
+                <!-- Projects Grid -->
+                <section
+                    class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in"
+                    aria-label="Open source projects"
+                >
+                    <!-- scd4x-rs -->
+                    <a
+                        href="https://github.com/hauju/scd4x-rs"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                scd4x-rs
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Embedded-hal driver for the Sensirion SCD4x CO₂,
+                            humidity & temperature sensor family.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                            <span class="flex items-center gap-1"
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                    class="w-3.5 h-3.5 text-yellow-400/80"
+                                >
+                                    <path
+                                        d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                    /></svg
+                                >13</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- dioxus-docs-kit -->
+                    <a
+                        href="https://github.com/hauju/dioxus-docs-kit"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                dioxus-docs-kit
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Reusable, drop-in documentation site kit for Dioxus
+                            applications.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                            <span class="flex items-center gap-1"
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                    class="w-3.5 h-3.5 text-yellow-400/80"
+                                >
+                                    <path
+                                        d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                    /></svg
+                                >7</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- fluent-assertions-rs -->
+                    <a
+                        href="https://github.com/hauju/fluent-assertions-rs"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                fluent-assertions-rs
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Natural-language, fluent assertion syntax for more
+                            readable Rust tests.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                            <span class="flex items-center gap-1"
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                    class="w-3.5 h-3.5 text-yellow-400/80"
+                                >
+                                    <path
+                                        d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                    /></svg
+                                >2</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- infrapage -->
+                    <a
+                        href="https://github.com/hauju/infrapage"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                infrapage
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Self-hosted, widget-based infrastructure dashboard —
+                            the engine behind infra.page.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                            <span class="flex items-center gap-1"
+                                ><svg
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                    class="w-3.5 h-3.5 text-yellow-400/80"
+                                >
+                                    <path
+                                        d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                    /></svg
+                                >1</span
+                            >
+                            <span
+                                class="flex items-center gap-1.5 text-cyan-300/80"
+                                >infra.page</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- dx-saas-template -->
+                    <a
+                        href="https://github.com/hauju/dx-saas-template"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                dx-saas-template
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Production-ready fullstack Dioxus 0.7 SaaS starter
+                            template.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- sen5x-rs -->
+                    <a
+                        href="https://github.com/hauju/sen5x-rs"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                sen5x-rs
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Embedded-hal driver for the Sensirion SEN5x
+                            environmental sensor node.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- stepshots -->
+                    <a
+                        href="https://github.com/hauju/stepshots"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                stepshots
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            CLI, Chrome extension, and embeds for recording
+                            interactive product demos.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-rust-orange"
+                                ></span
+                                >Rust</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- internal-traffic-filter -->
+                    <a
+                        href="https://github.com/hauju/internal-traffic-filter"
+                        target="_blank"
+                        rel="noopener"
+                        class="link-card group flex flex-col bg-gradient-to-br from-slate-700/60 to-slate-900/70 backdrop-blur-sm rounded-2xl p-5 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <h2 class="text-lg font-semibold text-white font-mono">
+                                internal-traffic-filter
+                            </h2>
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                aria-hidden="true"
+                                class="w-5 h-5 shrink-0 text-gray-500 group-hover:text-white transition-colors"
+                            >
+                                <path
+                                    d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.31 3.3 1.209a11.6 11.6 0 0 1 3.003-.396c1.02.005 2.047.131 3.006.396 2.29-1.519 3.295-1.209 3.295-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.171 0 1.566-.015 2.832-.015 3.219 0 .315.21.687.825.57C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5"
+                                />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300 leading-relaxed grow">
+                            Chrome extension that filters your own visits out of
+                            Umami and datafa.st analytics.
+                        </p>
+                        <div
+                            class="mt-4 flex items-center gap-4 text-xs text-gray-400"
+                        >
+                            <span class="flex items-center gap-1.5"
+                                ><span
+                                    class="w-2.5 h-2.5 rounded-full bg-[#f1e05a]"
+                                ></span
+                                >JavaScript</span
+                            >
+                        </div>
+                    </a>
+                </section>
+
+                <!-- View all -->
+                <div class="mt-10 text-center fade-in">
+                    <a
+                        href="https://github.com/hauju?tab=repositories"
+                        target="_blank"
+                        rel="me noopener"
+                        class="inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                    >
+                        View all repositories on GitHub
+                        <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Footer -->
+                <footer class="mt-16 text-center">
+                    <p class="text-gray-500 text-sm">
+                        Made with <span class="text-red-500">♥</span> by Hauke
+                        Jung
+                    </p>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>
