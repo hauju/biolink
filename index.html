@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Hauke Jung - Indie Hacker, Software Engineer. Check out my projects and connect with me!"
+            content="Hauke Jung - Full-Stack Rust Developer & Solopreneur. Building AI-native products, available for freelance projects."
         />
         <meta name="author" content="Hauke Jung" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#0f0e0c" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="canonical" href="https://haukejung.de/" />
 
@@ -19,11 +19,11 @@
         <meta property="og:locale" content="en_US" />
         <meta
             property="og:title"
-            content="Hauke Jung - Indie Hacker & Software Engineer"
+            content="Hauke Jung - Full-Stack Rust Developer & Solopreneur"
         />
         <meta
             property="og:description"
-            content="Indie Hacker, Software Engineer. Check out my projects and connect with me!"
+            content="Full-Stack Rust Developer & Solopreneur. Building AI-native products, available for freelance projects."
         />
         <meta
             property="og:image"
@@ -33,7 +33,7 @@
         <meta property="og:image:height" content="630" />
         <meta
             property="og:image:alt"
-            content="Hauke Jung - Indie Hacker & Software Engineer"
+            content="Hauke Jung - Full-Stack Rust Developer & Solopreneur"
         />
 
         <!-- Twitter Card -->
@@ -42,11 +42,11 @@
         <meta name="twitter:site" content="@haukejung" />
         <meta
             name="twitter:title"
-            content="Hauke Jung - Indie Hacker & Software Engineer"
+            content="Hauke Jung - Full-Stack Rust Developer & Solopreneur"
         />
         <meta
             name="twitter:description"
-            content="Indie Hacker, Software Engineer. Check out my projects and connect with me!"
+            content="Full-Stack Rust Developer & Solopreneur. Building AI-native products, available for freelance projects."
         />
         <meta
             name="twitter:image"
@@ -64,12 +64,12 @@
                         "name": "Hauke Jung",
                         "url": "https://haukejung.de",
                         "image": "https://haukejung.de/assets/images/hauju.jpg",
-                        "jobTitle": "Software Engineer",
-                        "description": "Indie Hacker & Software Engineer",
+                        "jobTitle": "Full-Stack Rust Developer",
+                        "description": "Full-Stack Rust Developer & Solopreneur",
                         "knowsAbout": [
                             "Software Engineering",
                             "Rust",
-                            "Indie Hacking",
+                            "AI-Native Development",
                             "Web Development"
                         ],
                         "sameAs": [
@@ -81,6 +81,7 @@
                         "owns": [
                             { "@id": "https://infra.page/#website" },
                             { "@id": "https://seggwat.com/#website" },
+                            { "@id": "https://stepshots.com/#website" },
                             { "@id": "https://oxidt.com/#website" },
                             { "@id": "https://hikeandcode.com/#website" }
                         ]
@@ -103,6 +104,14 @@
                     },
                     {
                         "@type": "WebSite",
+                        "@id": "https://stepshots.com/#website",
+                        "url": "https://stepshots.com",
+                        "name": "Stepshots",
+                        "description": "CLI, Chrome extension, and embeds for recording interactive product demos.",
+                        "author": { "@id": "https://haukejung.de/#person" }
+                    },
+                    {
+                        "@type": "WebSite",
                         "@id": "https://oxidt.com/#website",
                         "url": "https://oxidt.com",
                         "name": "Oxidt",
@@ -121,9 +130,11 @@
             }
         </script>
 
-        <title>Hauke Jung - Indie Hacker & Software Engineer</title>
+        <title>Hauke Jung - Full-Stack Rust Developer & Solopreneur</title>
 
         <link href="./tailwind.css" rel="stylesheet" type="text/css" />
+        <link rel="preload" as="font" type="font/woff2" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" crossorigin />
+        <link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" crossorigin />
         <link rel="preload" as="image" href="assets/images/hauju-288.webp" type="image/webp" fetchpriority="high" />
 
         <!-- Favicons -->
@@ -138,704 +149,401 @@
         ></script>
 
         <style>
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
+            @media (prefers-reduced-motion: no-preference) {
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(8px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
 
-            .fade-in {
-                animation: fadeIn 0.6s ease-out forwards;
-            }
-
-            .link-card {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .link-card:hover {
-                transform: translateY(-2px);
-            }
-
-            .link-card:active {
-                transform: translateY(0);
-            }
-
-            .business-card-wrap {
-                perspective: 1200px;
-            }
-
-            .business-card-3d {
-                transform-style: preserve-3d;
-                transition:
-                    transform 0.25s ease,
-                    box-shadow 0.35s ease;
-            }
-
-            .business-card-3d::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                border-radius: 1rem;
-                pointer-events: none;
-                background: linear-gradient(
-                    130deg,
-                    rgba(255, 255, 255, 0.15),
-                    transparent 40%,
-                    transparent 60%,
-                    rgba(255, 255, 255, 0.08)
-                );
-                transform: translateZ(1px);
-            }
-
-            .business-card-content {
-                transform: translateZ(30px);
-            }
-
-            .business-card-logo {
-                transform: translateZ(45px);
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                .business-card-3d {
-                    transition: none;
+                .fade-in {
+                    animation: fadeIn 0.5s ease-out both;
                 }
             }
         </style>
     </head>
 
-    <body class="antialiased">
-        <main
-            class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-800 py-12 px-4"
-        >
-            <div class="max-w-2xl mx-auto">
-                <!-- Top Nav -->
+    <body class="antialiased bg-ink-950 text-stone-200 min-h-[100dvh]">
+        <!-- Top Bar -->
+        <header class="border-b border-white/[0.07]">
+            <div
+                class="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-center sm:justify-between"
+            >
+                <a
+                    href="/"
+                    class="hidden sm:block font-mono text-sm font-semibold text-stone-100 whitespace-nowrap"
+                    >hauke jung</a
+                >
                 <nav
                     aria-label="Primary"
-                    class="flex justify-center gap-2 text-sm mb-10 fade-in"
+                    class="flex items-center gap-4 sm:gap-6 text-sm"
                 >
                     <a
                         href="/"
                         aria-current="page"
-                        class="px-4 py-2 rounded-full font-medium text-white bg-white/10 border border-white/10 transition-colors"
+                        class="text-stone-100 font-medium"
                         >Home</a
                     >
                     <a
+                        href="/freelance.html"
+                        class="text-stone-500 hover:text-stone-100 transition-colors"
+                        >Freelance</a
+                    >
+                    <a
                         href="/open-source.html"
-                        class="px-4 py-2 rounded-full font-medium text-gray-400 hover:text-white hover:bg-white/5 border border-transparent transition-colors"
+                        class="text-stone-500 hover:text-stone-100 transition-colors whitespace-nowrap"
                         >Open Source</a
                     >
                     <a
                         href="/about.html"
-                        class="px-4 py-2 rounded-full font-medium text-gray-400 hover:text-white hover:bg-white/5 border border-transparent transition-colors"
+                        class="text-stone-500 hover:text-stone-100 transition-colors"
                         >About</a
                     >
+                    <!-- Hidden until filled with real data
+                    <a
+                        href="/friends.html"
+                        class="text-stone-500 hover:text-stone-100 transition-colors"
+                        >Friends</a
+                    >
+                    -->
                 </nav>
+            </div>
+        </header>
 
-                <!-- Profile Section -->
-                <header class="text-center fade-in">
-                    <div class="inline-block relative">
-                        <picture>
-                            <source srcset="assets/images/hauju-288.webp" type="image/webp" />
-                            <img
-                                src="assets/images/hauju-288.jpg"
-                                alt="Hauke Jung - Indie Hacker and Software Engineer"
-                                width="144"
-                                height="144"
-                                fetchpriority="high"
-                                decoding="async"
-                                class="h-36 w-36 rounded-full border-4 border-white/10 shadow-2xl object-cover"
-                            />
-                        </picture>
-                        <div
-                            class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-600/20 blur-xl -z-10"
-                        ></div>
-                    </div>
-
+        <main class="max-w-3xl mx-auto px-4 sm:px-6 fade-in">
+            <!-- Hero -->
+            <section
+                class="pt-14 sm:pt-20 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10"
+            >
+                <div class="flex-1">
+                    <p class="font-mono text-sm text-stone-400">
+                        Full-Stack Rust Developer
+                        <span class="text-rust-orange">/</span> AI-Native
+                        <span class="text-rust-orange">/</span> Solopreneur
+                    </p>
                     <h1
-                        class="mt-6 text-3xl md:text-4xl font-bold text-white font-mono tracking-tight"
+                        class="mt-3 font-mono text-4xl sm:text-5xl font-semibold tracking-tight text-stone-100"
                     >
                         Hauke Jung
                     </h1>
-
                     <p
-                        class="mt-3 text-base md:text-lg text-gray-300 max-w-md mx-auto leading-relaxed"
+                        class="mt-4 text-stone-400 leading-relaxed max-w-[52ch]"
                     >
-                        Indie Hacker 🧑‍💻<span class="text-gray-500 mx-2">•</span
-                        >Software Engineer 🦀<span class="text-gray-500 mx-2"
-                            >•</span
-                        >Continuous Learner 📚
+                        I help teams and founders ship production software in
+                        Rust, backend to frontend, at AI-native pace.
                     </p>
-                </header>
-
-                <!-- Links Container -->
-                <nav
-                    class="mt-12 space-y-8"
-                    aria-label="Social and project links"
-                >
-                    <!-- Projects Section -->
-                    <section class="space-y-4">
-                        <h2
-                            class="text-xs uppercase tracking-wider text-gray-500 font-semibold px-4"
+                    <div class="mt-6 flex flex-wrap items-center gap-5">
+                        <a
+                            href="/freelance.html"
+                            class="inline-flex items-center gap-2 rounded-md bg-rust-orange hover:bg-rust-orange/90 px-5 py-2.5 text-sm font-semibold text-ink-950 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
                         >
-                            Projects
-                        </h2>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <a
-                                href="https://infra.page"
-                                target="_blank"
-                                rel="noopener"
-                                class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit Infra.page - dashboard for indie projects"
+                            Work with me
+                            <svg
+                                class="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
                             >
-                                <article
-                                    class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
-                                >
-                                    <div
-                                        class="card-body business-card-content p-5 sm:p-6"
-                                    >
-                                        <div
-                                            class="flex items-center justify-between gap-4"
-                                        >
-                                            <div>
-                                                <p
-                                                    class="text-xs uppercase tracking-[0.25em] text-cyan-300/70"
-                                                >
-                                                    Project Card
-                                                </p>
-                                                <h3
-                                                    class="text-2xl font-semibold text-white mt-1"
-                                                >
-                                                    Infra.page
-                                                </h3>
-                                                <p
-                                                    class="text-sm text-gray-300 mt-1"
-                                                >
-                                                    Hosting, analytics, errors
-                                                    & deploys in one dashboard
-                                                </p>
-                                            </div>
-                                            <div
-                                                class="business-card-logo w-14 h-14 bg-white/10 rounded-xl p-2 backdrop-blur-sm flex items-center justify-center"
-                                            >
-                                                <img
-                                                    src="assets/images/infrapage_logo.svg"
-                                                    alt="Infra.page logo"
-                                                    class="w-full h-full object-contain invert opacity-90"
-                                                />
-                                            </div>
-                                        </div>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </a>
+                        <span
+                            class="inline-flex items-center gap-2 font-mono text-xs text-stone-500"
+                        >
+                            <span
+                                class="h-1.5 w-1.5 rounded-full bg-emerald-400"
+                            ></span>
+                            available for new projects
+                        </span>
+                    </div>
+                </div>
+                <picture class="order-first sm:order-last shrink-0">
+                    <source srcset="assets/images/hauju-288.webp" type="image/webp" />
+                    <img
+                        src="assets/images/hauju-288.jpg"
+                        alt="Hauke Jung, full-stack Rust developer and solopreneur"
+                        width="144"
+                        height="144"
+                        fetchpriority="high"
+                        decoding="async"
+                        class="h-16 w-16 sm:h-36 sm:w-36 rounded-md border border-white/10 object-cover"
+                    />
+                </picture>
+            </section>
 
-                                        <div
-                                            class="mt-5 flex items-center justify-between"
-                                        >
-                                            <p class="text-xs text-gray-400">
-                                                infra.page
-                                            </p>
-                                            <span
-                                                class="badge badge-outline badge-success"
-                                                >Live</span
-                                            >
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
+            <!-- Proof -->
+            <section
+                class="mt-12 pt-6 border-t border-white/[0.07] grid grid-cols-3 gap-4"
+            >
+                <div>
+                    <p class="font-mono text-xl sm:text-2xl text-stone-100">
+                        55k+
+                    </p>
+                    <p class="mt-1 text-[13px] text-stone-500">
+                        crate downloads
+                    </p>
+                </div>
+                <div>
+                    <p class="font-mono text-xl sm:text-2xl text-stone-100">
+                        25
+                    </p>
+                    <p class="mt-1 text-[13px] text-stone-500">
+                        open-source repos
+                    </p>
+                </div>
+                <div>
+                    <p class="font-mono text-xl sm:text-2xl text-stone-100">
+                        10 yrs
+                    </p>
+                    <p class="mt-1 text-[13px] text-stone-500">
+                        dev experience
+                    </p>
+                </div>
+            </section>
 
-                            <a
-                                href="https://seggwat.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit SeggWat - user feedback collection platform"
+            <!-- Products -->
+            <section class="mt-16">
+                <h2 class="font-mono text-sm text-stone-500 mb-5">
+                    <span class="text-rust-orange">//</span> products
+                </h2>
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <a
+                        href="https://infra.page"
+                        target="_blank"
+                        rel="noopener"
+                        class="group flex flex-col rounded-md border border-white/[0.08] bg-white/[0.02] p-5 transition-colors hover:border-rust-orange/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
+                        aria-label="Visit Infra.page, a dashboard for indie projects"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="font-mono text-xs text-rust-orange"
+                                >saas</span
                             >
-                                <article
-                                    class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
-                                >
-                                    <div
-                                        class="card-body business-card-content p-5 sm:p-6"
-                                    >
-                                        <div
-                                            class="flex items-center justify-between gap-4"
-                                        >
-                                            <div>
-                                                <p
-                                                    class="text-xs uppercase tracking-[0.25em] text-purple-300/70"
-                                                >
-                                                    Project Card
-                                                </p>
-                                                <h3
-                                                    class="text-2xl font-semibold text-white mt-1"
-                                                >
-                                                    SeggWat
-                                                </h3>
-                                                <p
-                                                    class="text-sm text-gray-300 mt-1"
-                                                >
-                                                    Feedback collection for
-                                                    indie projects & small teams
-                                                </p>
-                                            </div>
-                                            <div
-                                                class="business-card-logo w-14 h-14 bg-white/10 rounded-xl p-2 backdrop-blur-sm"
-                                            >
-                                                <img
-                                                    src="assets/images/seggwat_logo.png"
-                                                    alt="SeggWat logo"
-                                                    class="w-full h-full object-contain"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="mt-5 flex items-center justify-between"
-                                        >
-                                            <p class="text-xs text-gray-400">
-                                                seggwat.com
-                                            </p>
-                                            <span
-                                                class="badge badge-outline badge-success"
-                                                >Live</span
-                                            >
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
-
-                            <a
-                                href="https://oxidt.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Read Oxidt - tech blog on software and indie hacking"
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                aria-hidden="true"
+                                class="h-6 w-6 text-stone-200"
                             >
-                                <article
-                                    class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
-                                >
-                                    <div
-                                        class="card-body business-card-content p-5 sm:p-6"
-                                    >
-                                        <div
-                                            class="flex items-center justify-between gap-4"
-                                        >
-                                            <div>
-                                                <p
-                                                    class="text-xs uppercase tracking-[0.25em] text-orange-300/70"
-                                                >
-                                                    Project Card
-                                                </p>
-                                                <h3
-                                                    class="text-2xl font-semibold text-white mt-1"
-                                                >
-                                                    Oxidt
-                                                </h3>
-                                                <p
-                                                    class="text-sm text-gray-300 mt-1"
-                                                >
-                                                    Rust, software engineering
-                                                    & indie hacking
-                                                </p>
-                                            </div>
-                                            <div
-                                                class="business-card-logo w-14 h-14 bg-white/10 rounded-xl p-2 backdrop-blur-sm"
-                                            >
-                                                <img
-                                                    src="assets/images/oxidt_logo.svg"
-                                                    alt="Oxidt logo"
-                                                    class="w-full h-full object-contain"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="mt-5 flex items-center justify-between"
-                                        >
-                                            <p class="text-xs text-gray-400">
-                                                oxidt.com
-                                            </p>
-                                            <span
-                                                class="badge badge-outline badge-success"
-                                                >Live</span
-                                            >
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
-                            <a
-                                href="https://hikeandcode.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="business-card-wrap block focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-2xl"
-                                aria-label="Visit Hike & Code - hiking meets software engineering"
-                            >
-                                <article
-                                    class="business-card-3d card h-full relative border border-white/10 bg-gradient-to-br from-slate-700/70 to-slate-900/80 shadow-2xl rounded-2xl overflow-hidden"
-                                >
-                                    <div
-                                        class="card-body business-card-content p-5 sm:p-6"
-                                    >
-                                        <div
-                                            class="flex items-center justify-between gap-4"
-                                        >
-                                            <div>
-                                                <p
-                                                    class="text-xs uppercase tracking-[0.25em] text-emerald-300/70"
-                                                >
-                                                    Project Card
-                                                </p>
-                                                <h3
-                                                    class="text-2xl font-semibold text-white mt-1"
-                                                >
-                                                    Hike & Code
-                                                </h3>
-                                                <p
-                                                    class="text-sm text-gray-300 mt-1"
-                                                >
-                                                    Trip reports & notes from
-                                                    the trail
-                                                </p>
-                                            </div>
-                                            <div
-                                                class="business-card-logo w-14 h-14 bg-white/10 rounded-xl p-2 backdrop-blur-sm flex items-center justify-center"
-                                            >
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="w-8 h-8 text-emerald-300/90"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                    stroke-width="1.5"
-                                                >
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M3 17l4-8 3 4 4-10 4 8 3-2"
-                                                    />
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M2 20h20"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="mt-5 flex items-center justify-between"
-                                        >
-                                            <p class="text-xs text-gray-400">
-                                                hikeandcode.com
-                                            </p>
-                                            <span
-                                                class="badge badge-outline badge-success"
-                                                >Live</span
-                                            >
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
+                                <rect x="3" y="3" width="7" height="9" rx="1.5" fill="currentColor" opacity="0.3" />
+                                <rect x="14" y="3" width="7" height="5" rx="1.5" fill="oklch(0.74 0.15 162)" />
+                                <rect x="14" y="12" width="7" height="9" rx="1.5" fill="currentColor" opacity="0.3" />
+                                <rect x="3" y="16" width="7" height="5" rx="1.5" fill="currentColor" opacity="0.3" />
+                            </svg>
                         </div>
-                    </section>
-
-                    <!-- Social Section -->
-                    <section class="space-y-3">
-                        <h2
-                            class="text-xs uppercase tracking-wider text-gray-500 font-semibold px-4"
+                        <h3 class="mt-2 text-lg font-semibold text-stone-100">
+                            Infra.page
+                        </h3>
+                        <p class="mt-1 text-sm text-stone-400 leading-relaxed">
+                            Hosting, analytics, errors & deploys in one
+                            dashboard
+                        </p>
+                        <p
+                            class="mt-4 pt-3 border-t border-white/[0.06] font-mono text-xs text-stone-500 flex items-center justify-between"
                         >
-                            Connect
-                        </h2>
+                            infra.page
+                            <span
+                                class="group-hover:text-stone-200 transition-colors"
+                                >&#8599;</span
+                            >
+                        </p>
+                    </a>
 
-                        <a
-                            href="https://github.com/hauju"
-                            target="_blank"
-                            rel="me noopener"
-                            class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Visit Hauke Jung on GitHub"
+                    <a
+                        href="https://seggwat.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="group flex flex-col rounded-md border border-white/[0.08] bg-white/[0.02] p-5 transition-colors hover:border-rust-orange/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
+                        aria-label="Visit SeggWat, a user feedback collection platform"
+                    >
+                        <div class="flex items-start justify-between gap-3">
+                            <span class="font-mono text-xs text-rust-orange"
+                                >saas</span
+                            >
+                            <img
+                                src="assets/images/seggwat_logo.png"
+                                alt=""
+                                class="h-6 w-6 object-contain"
+                            />
+                        </div>
+                        <h3 class="mt-2 text-lg font-semibold text-stone-100">
+                            SeggWat
+                        </h3>
+                        <p class="mt-1 text-sm text-stone-400 leading-relaxed">
+                            Feedback collection for indie projects & small
+                            teams
+                        </p>
+                        <p
+                            class="mt-4 pt-3 border-t border-white/[0.06] font-mono text-xs text-stone-500 flex items-center justify-between"
                         >
-                            <div class="flex items-center space-x-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="2"
-                                        stroke="currentColor"
-                                        class="w-6 h-6 text-white"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                                        />
-                                    </svg>
-                                </div>
+                            seggwat.com
+                            <span
+                                class="group-hover:text-stone-200 transition-colors"
+                                >&#8599;</span
+                            >
+                        </p>
+                    </a>
+
+                    <a
+                        href="https://stepshots.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="group sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-4 rounded-md border border-white/[0.08] bg-white/[0.02] p-5 transition-colors hover:border-rust-orange/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
+                        aria-label="Visit Stepshots, record interactive product demos"
+                    >
+                        <div class="flex-1">
+                            <span class="font-mono text-xs text-rust-orange"
+                                >tool</span
+                            >
+                            <h3
+                                class="mt-2 text-lg font-semibold text-stone-100"
+                            >
+                                Stepshots
+                            </h3>
+                            <p
+                                class="mt-1 text-sm text-stone-400 leading-relaxed"
+                            >
+                                CLI, Chrome extension & embeds for recording
+                                interactive product demos
+                            </p>
+                        </div>
+                        <div
+                            class="flex sm:flex-col items-center sm:items-end justify-between gap-3 shrink-0"
+                        >
+                            <img
+                                src="assets/images/stepshots_logo.svg"
+                                alt=""
+                                class="h-7 w-7"
+                            />
+                            <p
+                                class="font-mono text-xs text-stone-500 flex items-center gap-2"
+                            >
+                                stepshots.com
                                 <span
-                                    class="text-white font-semibold text-lg group-hover:text-gray-300 transition-colors"
-                                    >GitHub</span
+                                    class="group-hover:text-stone-200 transition-colors"
+                                    >&#8599;</span
                                 >
-                            </div>
-                            <svg
-                                class="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Writing -->
+            <section class="mt-16">
+                <h2 class="font-mono text-sm text-stone-500 mb-2">
+                    <span class="text-rust-orange">//</span> writing
+                </h2>
+                <div class="divide-y divide-white/[0.07]">
+                    <a
+                        href="https://oxidt.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="group flex items-baseline justify-between gap-4 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 rounded-sm"
+                    >
+                        <p class="min-w-0">
+                            <span class="font-medium text-stone-100"
+                                >Oxidt</span
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </a>
-
-                        <a
-                            href="https://twitter.com/haukejung"
-                            target="_blank"
-                            rel="me noopener"
-                            class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Follow Hauke Jung on Twitter / X"
-                        >
-                            <div class="flex items-center space-x-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-slate-800 to-black rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="w-6 h-6 text-white"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
-                                        />
-                                    </svg>
-                                </div>
-                                <span
-                                    class="text-white font-semibold text-lg group-hover:text-gray-300 transition-colors"
-                                    >Twitter / X</span
-                                >
-                            </div>
-                            <svg
-                                class="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            <span class="text-sm text-stone-400">
+                                Rust, software engineering & indie hacking</span
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </a>
-
-                        <a
-                            href="https://bsky.app/profile/hauju.bsky.social"
-                            target="_blank"
-                            rel="me noopener"
-                            class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Follow Hauke Jung on Bluesky"
+                        </p>
+                        <span
+                            class="font-mono text-xs text-stone-500 group-hover:text-stone-200 transition-colors shrink-0"
+                            >oxidt.com &#8599;</span
                         >
-                            <div class="flex items-center space-x-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-sky-400 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        class="w-6 h-6 text-white"
-                                        fill="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        <path
-                                            d="M12 11.7C10.5 8.8 6.8 6.1 4.1 4.3c-.8-.5-1.6.2-1.4 1.1.8 3.6 3.1 6.6 6.3 8.3-2 .1-3.9.8-5.4 2.1-.7.6-.4 1.8.5 2 3.2.9 6.5.1 8.9-2.1 2.4 2.2 5.7 3 8.9 2.1.9-.2 1.2-1.4.5-2-1.5-1.3-3.4-2-5.4-2.1 3.2-1.7 5.5-4.7 6.3-8.3.2-.9-.6-1.6-1.4-1.1-2.7 1.8-6.4 4.5-7.9 7.4z"
-                                        />
-                                    </svg>
-                                </div>
-                                <span
-                                    class="text-white font-semibold text-lg group-hover:text-sky-300 transition-colors"
-                                    >Bluesky</span
-                                >
-                            </div>
-                            <svg
-                                class="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                    </a>
+                    <a
+                        href="https://hikeandcode.com"
+                        target="_blank"
+                        rel="noopener"
+                        class="group flex items-baseline justify-between gap-4 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 rounded-sm"
+                    >
+                        <p class="min-w-0">
+                            <span class="font-medium text-stone-100"
+                                >Hike & Code</span
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/haukejung/"
-                            target="_blank"
-                            rel="me noopener"
-                            class="link-card group flex items-center justify-between bg-gradient-to-r from-slate-700/50 to-slate-600/50 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-white/5 hover:border-white/10 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Connect with Hauke Jung on LinkedIn"
-                        >
-                            <div class="flex items-center space-x-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="2"
-                                        stroke="currentColor"
-                                        class="w-6 h-6 text-white"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z"
-                                        />
-                                    </svg>
-                                </div>
-                                <span
-                                    class="text-white font-semibold text-lg group-hover:text-blue-300 transition-colors"
-                                    >LinkedIn</span
-                                >
-                            </div>
-                            <svg
-                                class="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                            <span class="text-sm text-stone-400">
+                                Trip reports & notes from the trail</span
                             >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </a>
-                    </section>
-
-                    <!-- Support Section -->
-                    <section class="space-y-3">
-                        <h2
-                            class="text-xs uppercase tracking-wider text-gray-500 font-semibold px-4"
+                        </p>
+                        <span
+                            class="font-mono text-xs text-stone-500 group-hover:text-stone-200 transition-colors shrink-0"
+                            >hikeandcode.com &#8599;</span
                         >
-                            Support
-                        </h2>
+                    </a>
+                </div>
+            </section>
 
-                        <a
-                            href="https://www.buymeacoffee.com/haukejung"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="link-card group flex items-center justify-between bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl border border-yellow-500/20 hover:border-yellow-500/40 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-slate-900"
-                            aria-label="Buy me a coffee"
-                        >
-                            <div class="flex items-center space-x-4">
-                                <div
-                                    class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke-width="2"
-                                        stroke="currentColor"
-                                        class="w-6 h-6 text-white"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-left">
-                                    <span
-                                        class="block text-white font-semibold text-lg group-hover:text-yellow-300 transition-colors"
-                                        >Buy me a coffee</span
-                                    >
-                                    <span class="block text-gray-400 text-sm"
-                                        >Support my work</span
-                                    >
-                                </div>
-                            </div>
-                            <svg
-                                class="w-5 h-5 text-gray-400 group-hover:text-yellow-300 group-hover:translate-x-1 transition-all"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                />
-                            </svg>
-                        </a>
-                    </section>
-                </nav>
+            <!-- Connect -->
+            <section class="mt-16">
+                <h2 class="font-mono text-sm text-stone-500 mb-4">
+                    <span class="text-rust-orange">//</span> connect
+                </h2>
+                <div class="flex flex-wrap gap-x-7 gap-y-3 font-mono text-sm">
+                    <a
+                        href="https://github.com/hauju"
+                        target="_blank"
+                        rel="me noopener"
+                        class="text-stone-400 hover:text-rust-orange transition-colors"
+                        >GitHub &#8599;</a
+                    >
+                    <a
+                        href="https://twitter.com/haukejung"
+                        target="_blank"
+                        rel="me noopener"
+                        class="text-stone-400 hover:text-rust-orange transition-colors"
+                        >X &#8599;</a
+                    >
+                    <a
+                        href="https://bsky.app/profile/hauju.bsky.social"
+                        target="_blank"
+                        rel="me noopener"
+                        class="text-stone-400 hover:text-rust-orange transition-colors"
+                        >Bluesky &#8599;</a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/haukejung/"
+                        target="_blank"
+                        rel="me noopener"
+                        class="text-stone-400 hover:text-rust-orange transition-colors"
+                        >LinkedIn &#8599;</a
+                    >
+                </div>
+            </section>
 
-                <!-- Footer -->
-                <footer class="mt-16 text-center space-y-2">
-                    <p class="text-gray-500 text-sm">
-                        Made with <span class="text-red-500">♥</span> by Hauke
-                        Jung
-                    </p>
-                    <p>
-                        <a
-                            href="imprint.html"
-                            class="text-gray-500 hover:text-gray-300 text-sm underline underline-offset-4 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded"
-                            >Imprint</a
-                        >
-                    </p>
-                </footer>
-            </div>
+            <!-- Footer -->
+            <footer
+                class="mt-20 py-8 border-t border-white/[0.07] flex flex-wrap items-center justify-between gap-3 text-[13px] text-stone-500"
+            >
+                <p>&copy; 2026 Hauke Jung</p>
+                <p class="space-x-5">
+                    <a
+                        href="imprint.html"
+                        class="hover:text-stone-300 transition-colors"
+                        >Imprint</a
+                    >
+                    <a
+                        href="https://www.buymeacoffee.com/haukejung"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-stone-300 transition-colors"
+                        >Buy me a coffee</a
+                    >
+                </p>
+            </footer>
         </main>
-        <script>
-            const supportsFinePointer =
-                window.matchMedia("(pointer: fine)").matches;
-            const prefersReducedMotion = window.matchMedia(
-                "(prefers-reduced-motion: reduce)",
-            ).matches;
-
-            if (supportsFinePointer && !prefersReducedMotion) {
-                const projectCards = document.querySelectorAll(
-                    ".business-card-wrap",
-                );
-
-                for (const cardWrap of projectCards) {
-                    const card = cardWrap.querySelector(".business-card-3d");
-                    if (!card) continue;
-
-                    cardWrap.addEventListener("mousemove", (event) => {
-                        const rect = cardWrap.getBoundingClientRect();
-                        const x = (event.clientX - rect.left) / rect.width;
-                        const y = (event.clientY - rect.top) / rect.height;
-                        const rotateY = (x - 0.5) * 16;
-                        const rotateX = (0.5 - y) * 12;
-
-                        card.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px)`;
-                    });
-
-                    cardWrap.addEventListener("mouseleave", () => {
-                        card.style.transform = "";
-                    });
-                }
-            }
-        </script>
     </body>
 </html>
