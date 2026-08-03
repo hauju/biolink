@@ -2,12 +2,46 @@
 @source "../public/*.{html,js}";
 @plugin "daisyui";
 
+/* Self-hosted variable fonts (copied from @fontsource-variable packages) */
+@font-face {
+    font-family: "Hanken Grotesk Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url("./assets/fonts/hanken-grotesk-latin-wght-normal.woff2")
+        format("woff2-variations");
+}
+
+@font-face {
+    font-family: "JetBrains Mono Variable";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 800;
+    src: url("./assets/fonts/jetbrains-mono-latin-wght-normal.woff2")
+        format("woff2-variations");
+}
 
 @theme {
-    --color-twitter-blue: #1DA1F2;
-    --color-linkedin-blue: #0077B5;
-    --color-youtube-red: #FF0000;
+    --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui,
+        sans-serif;
+    --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo,
+        monospace;
+
+    /* Warm near-black surface scale */
+    --color-ink-950: #0f0e0c;
+    --color-ink-900: #171511;
+    --color-ink-800: #211e19;
+
+    --color-twitter-blue: #1da1f2;
+    --color-linkedin-blue: #0077b5;
+    --color-youtube-red: #ff0000;
     --color-github-black: #333333;
-    --color-buymeacoffee-yellow: #FFDD00;
-    --color-rust-orange: #E57324;
+    --color-buymeacoffee-yellow: #ffdd00;
+    --color-rust-orange: #e57324;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-sans);
+    }
 }
