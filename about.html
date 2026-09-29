@@ -89,21 +89,6 @@
                 .fade-in {
                     animation: fadeIn 0.5s ease-out both;
                 }
-
-                .link-card {
-                    transition:
-                        transform 0.2s ease,
-                        border-color 0.2s ease,
-                        background-color 0.2s ease;
-                }
-
-                .link-card:hover {
-                    transform: translateY(-2px);
-                }
-
-                .link-card:active {
-                    transform: translateY(0);
-                }
             }
         </style>
     </head>
@@ -192,190 +177,63 @@
                         </p>
                     </section>
 
-                    <!-- What I build -->
+                    <!-- Background -->
                     <section class="space-y-4">
                         <h2 class="font-mono text-sm text-stone-500">
-                            <span class="text-rust-orange">//</span> what I
-                            build
+                            <span class="text-rust-orange">//</span> background
                         </h2>
                         <p class="text-stone-300 leading-relaxed">
-                            Most of my time goes into a handful of products:
+                            I've been writing software professionally for about
+                            ten years. The work has ranged from low-level to
+                            product-facing: a Windows OPC UA server that exposes
+                            hardware functions and diagnostics of B&amp;R
+                            industrial PCs, shipped as an official B&amp;R
+                            product, and the ETOPay SDK, an open-source Rust
+                            SDK for wallets, Web3 payments, and KYC flows.
                         </p>
-                        <div class="space-y-3">
-                            <a
-                                href="https://infra.page"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >Infra.page</span
-                                    >
-                                    - hosting, analytics, errors & deploys in one
-                                    dashboard</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://seggwat.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >SeggWat</span
-                                    >
-                                    - feedback collection for indie projects &
-                                    small teams</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://bollwark.eu"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >Bollwark</span
-                                    >
-                                    - privacy-first proof-of-work CAPTCHA, no
-                                    cookies or consent banner</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://mcpi.app"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >mcpi</span
-                                    >
-                                    - MCP server directory, re-probed every six
-                                    hours</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://oxidt.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >Oxidt</span
-                                    >
-                                    - my tech blog on Rust, software & indie
-                                    hacking</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://hikeandcode.com"
-                                target="_blank"
-                                rel="noopener"
-                                class="link-card group flex items-center justify-between gap-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] hover:border-rust-orange/40 rounded-md px-4 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-rust-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950"
-                            >
-                                <span class="text-stone-300"
-                                    ><span class="text-stone-100 font-semibold"
-                                        >Hike & Code</span
-                                    >
-                                    - where hiking meets software
-                                    engineering</span
-                                >
-                                <svg
-                                    class="w-4 h-4 shrink-0 text-stone-500 group-hover:text-stone-100 group-hover:translate-x-0.5 transition-all"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </svg>
-                            </a>
-                        </div>
+                        <p class="text-stone-300 leading-relaxed">
+                            That mix is why I ended up on Rust. The same
+                            language covers an embedded sensor driver, a
+                            payments backend, and a web UI, and the compiler
+                            catches the mistakes I'd rather not debug in
+                            production.
+                        </p>
+                    </section>
+
+                    <!-- Products -->
+                    <section class="space-y-4">
+                        <h2 class="font-mono text-sm text-stone-500">
+                            <span class="text-rust-orange">//</span> going solo
+                        </h2>
+                        <p class="text-stone-300 leading-relaxed">
+                            Today most of my time goes into my own products.
+                            Three of them sit on the infrastructure side:
+                            <a href="https://infra.page" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">Infra.page</a>
+                            pulls a project's hosting, analytics, errors, and
+                            deploys into one view,
+                            <a href="https://bollwark.eu" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">Bollwark</a>
+                            replaces reCAPTCHA with a proof-of-work check that
+                            needs no cookies, and
+                            <a href="https://mcpi.app" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">mcpi</a>
+                            keeps an MCP server directory honest by re-probing
+                            every listing.
+                        </p>
+                        <p class="text-stone-300 leading-relaxed">
+                            The other two help product teams talk to users:
+                            <a href="https://seggwat.com" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">SeggWat</a>
+                            collects feedback, ratings, and surveys, and
+                            <a href="https://stepshots.com" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">Stepshots</a>
+                            records clickable product demos. I write about
+                            building them on
+                            <a href="https://oxidt.com" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">Oxidt</a>,
+                            and about the trail on
+                            <a href="https://hikeandcode.com" target="_blank" rel="noopener" class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2">Hike &amp; Code</a>.
+                        </p>
                         <p class="text-stone-300 leading-relaxed">
                             Alongside the products, I publish libraries and
-                            developer tools as open source - embedded-hal sensor
+                            developer tools as open source: embedded-hal sensor
                             drivers, a Dioxus docs kit, testing helpers, and
-                            more.
+                            more, with over 55k crate downloads so far.
                             <a
                                 href="/open-source.html"
                                 class="text-rust-orange hover:text-rust-orange/80 underline underline-offset-2"
@@ -397,7 +255,9 @@
                             web UIs;
                             <span class="text-stone-100">Tailwind CSS + DaisyUI</span>
                             for styling; and self-hosted infrastructure wherever it
-                            makes sense.
+                            makes sense. My own products run on a small
+                            self-hosted cluster rather than a hyperscaler, which
+                            keeps costs predictable and the data in Europe.
                         </p>
                     </section>
 
