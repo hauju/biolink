@@ -236,9 +236,9 @@
         <main class="max-w-3xl mx-auto px-4 sm:px-6 fade-in">
             <!-- Hero -->
             <section
-                class="pt-14 sm:pt-20 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10"
+                class="pt-14 sm:pt-0 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10"
             >
-                <div class="flex-1">
+                <div class="flex-1 sm:pt-20">
                     <p class="font-mono text-sm text-stone-400">
                         Full-Stack Rust Developer
                         <span class="text-rust-orange">/</span> AI-Native
@@ -286,7 +286,7 @@
                         </span>
                     </div>
                 </div>
-                <picture class="order-first sm:order-last shrink-0">
+                <picture class="order-first sm:hidden shrink-0">
                     <source srcset="assets/images/hauju-288.webp" type="image/webp" />
                     <img
                         src="assets/images/hauju-288.jpg"
@@ -298,6 +298,67 @@
                         class="h-16 w-16 sm:h-36 sm:w-36 rounded-md border border-white/10 object-cover"
                     />
                 </picture>
+
+                <!-- Lanyard badge: drag to swing (desktop only) -->
+                <div
+                    id="badge"
+                    aria-hidden="true"
+                    class="hidden sm:flex flex-col items-center sm:self-start origin-top cursor-grab active:cursor-grabbing select-none touch-none [perspective:600px]"
+                >
+                    <!-- Lanyard: two woven strands meeting at a metal crimp -->
+                    <svg width="80" height="76" viewBox="0 0 80 76" class="block -mb-px">
+                        <defs>
+                            <linearGradient id="strap-front" x1="0" x2="1">
+                                <stop offset="0" stop-color="#c25c14" />
+                                <stop offset="0.45" stop-color="#e57324" />
+                                <stop offset="1" stop-color="#f08d47" />
+                            </linearGradient>
+                            <linearGradient id="strap-back" x1="0" x2="1">
+                                <stop offset="0" stop-color="#9c4a10" />
+                                <stop offset="1" stop-color="#bf5a15" />
+                            </linearGradient>
+                            <linearGradient id="strap-fade" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                                <stop offset="0.35" stop-color="#fff" />
+                            </linearGradient>
+                            <mask id="strap-mask"><rect width="80" height="76" fill="url(#strap-fade)" /></mask>
+                            <linearGradient id="crimp" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#e7e5e4" />
+                                <stop offset="1" stop-color="#78716c" />
+                            </linearGradient>
+                        </defs>
+                        <g mask="url(#strap-mask)">
+                            <polygon points="54,0 66,0 46,66 35,66" fill="url(#strap-back)" />
+                            <line x1="60" y1="0" x2="40.5" y2="66" stroke="#000" stroke-opacity="0.25" stroke-dasharray="2 2" />
+                            <polygon points="14,0 26,0 45,66 34,66" fill="url(#strap-front)" />
+                            <line x1="20" y1="0" x2="39.5" y2="66" stroke="#fff" stroke-opacity="0.3" stroke-dasharray="2 2" />
+                        </g>
+                        <rect x="31" y="62" width="18" height="10" rx="2" fill="url(#crimp)" />
+                        <rect x="31" y="66" width="18" height="1" fill="#000" fill-opacity="0.25" />
+                        <rect x="36" y="72" width="8" height="4" fill="#a8a29e" />
+                    </svg>
+                    <div class="w-3.5 h-3 -mt-px rounded-b-full border-2 border-t-0 border-stone-400"></div>
+                    <div
+                        id="badge-card"
+                        class="relative -mt-1.5 w-40 rounded-xl bg-gradient-to-b from-ink-800 to-ink-900 border border-white/10 shadow-[inset_0_1px_0_rgb(255_255_255/0.06),0_25px_50px_-12px_rgb(0_0_0/0.7)] overflow-hidden [transform-style:preserve-3d]"
+                    >
+                        <div class="mx-auto mt-2.5 w-9 h-2 rounded-full bg-ink-950 shadow-[inset_0_1px_2px_rgb(0_0_0/0.8)]"></div>
+                        <img
+                            src="assets/images/hauju-288.webp"
+                            alt=""
+                            draggable="false"
+                            class="mx-auto mt-3 w-20 h-20 rounded-lg object-cover ring-1 ring-white/15"
+                        />
+                        <p class="mt-3 text-center font-mono text-lg font-semibold tracking-tight text-stone-100">
+                            Hauke Jung
+                        </p>
+                        <p class="mt-3 py-1.5 bg-rust-orange text-center font-mono text-[10px] font-semibold tracking-widest text-ink-950">
+                            RUST DEV &amp; FOUNDER
+                        </p>
+                        <!-- Glare, moved by the swing -->
+                        <div id="badge-glare" class="pointer-events-none absolute inset-0"></div>
+                    </div>
+                </div>
             </section>
 
             <!-- Proof -->
@@ -633,5 +694,66 @@
                 </p>
             </footer>
         </main>
+        <script>
+            // Damped pendulum around the strap's top; drag to swing.
+            (() => {
+                const badge = document.getElementById("badge");
+                const card = document.getElementById("badge-card");
+                const glare = document.getElementById("badge-glare");
+                if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+                let angle = 0, vel = 0, dragging = false, last = 0, raf = 0;
+                const render = () => {
+                    badge.style.transform = `rotate(${angle}deg)`;
+                    card.style.transform = `rotateY(${Math.max(-25, Math.min(25, vel * 0.4))}deg)`;
+                    glare.style.background = `linear-gradient(${110 + angle * 3}deg, transparent 35%, rgb(255 255 255 / ${0.04 + Math.min(Math.abs(vel) / 800, 0.08)}) 50%, transparent 65%)`;
+                };
+                const step = (t) => {
+                    const dt = Math.min((t - last) / 1000, 0.032) || 0.016;
+                    last = t;
+                    if (!dragging) {
+                        vel += (-60 * angle - 2.5 * vel) * dt;
+                        angle += vel * dt;
+                    }
+                    render();
+                    if (dragging || Math.abs(angle) > 0.05 || Math.abs(vel) > 0.05) {
+                        raf = requestAnimationFrame(step);
+                    } else {
+                        angle = vel = 0;
+                        render();
+                        raf = 0;
+                    }
+                };
+                const kick = () => raf || (last = performance.now(), raf = requestAnimationFrame(step));
+                badge.addEventListener("pointerdown", (e) => {
+                    dragging = true;
+                    badge.setPointerCapture(e.pointerId);
+                    kick();
+                });
+                badge.addEventListener("pointermove", (e) => {
+                    if (!dragging) return;
+                    // offset* ignore transforms, so the pivot stays put while rotated
+                    const p = badge.offsetParent.getBoundingClientRect();
+                    const pivotX = p.left + badge.offsetLeft + badge.offsetWidth / 2;
+                    const pivotY = p.top + badge.offsetTop;
+                    const next = Math.max(-60, Math.min(60,
+                        (-Math.atan2(e.clientX - pivotX, e.clientY - pivotY) * 180) / Math.PI));
+                    vel = (next - angle) * 30;
+                    angle = next;
+                });
+                const release = () => (dragging = false);
+                badge.addEventListener("pointerup", release);
+                badge.addEventListener("pointercancel", release);
+                // Nudge away from the side the cursor enters from
+                badge.addEventListener("pointerenter", (e) => {
+                    if (dragging) return;
+                    const r = badge.getBoundingClientRect();
+                    vel += e.clientX < r.left + r.width / 2 ? -40 : 40;
+                    kick();
+                });
+                // One swing on load, once the page has faded in
+                setTimeout(() => { vel = 70; kick(); }, 500);
+                render();
+            })();
+        </script>
     </body>
 </html>
