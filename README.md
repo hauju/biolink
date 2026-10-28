@@ -16,6 +16,7 @@ I'm **Hauke Jung** — a software engineer and indie hacker based in Germany. I 
 | --- | --- |
 | [**Infra.page**](https://infra.page) | One dashboard for your entire project — aggregates hosting, analytics, errors, and deploys in a single view. |
 | [**SeggWat**](https://seggwat.com) | Lightweight feedback collection platform for indie projects and small teams. |
+| [**Overhear**](https://overhear.dev) | Social listening for product mentions across social platforms and the web, sorted with AI. |
 | [**Oxidt**](https://oxidt.com) | Tech blog on Rust, software engineering, and indie hacking. |
 | [**Hike & Code**](https://hikeandcode.com) | Where hiking meets software engineering — trip reports and notes from the trail. |
 
